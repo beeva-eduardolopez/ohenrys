@@ -1,5 +1,5 @@
 import {App, events, register, routing, web} from 'platypus';
-import HomeViewControl from '../viewcontrols/home/home.vc';
+import OhenrysViewControl from '../viewcontrols/ohenrys/ohenrys.vc';
 
 export default class MyApp extends App {
     constructor(router: routing.Router, config: web.IBrowserConfig) {
@@ -8,7 +8,8 @@ export default class MyApp extends App {
 		config.routingType = config.STATE;
 
         router.configure([
-            { pattern: '', view: HomeViewControl }
+            { pattern: '', view: OhenrysViewControl },
+            { pattern: 'ohenrys', view: OhenrysViewControl }
         ]);
     }
 
